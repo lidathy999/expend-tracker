@@ -1,0 +1,45 @@
+<div class="left-menu">
+  <ul >
+    <li *ngFor="let menu of menu_data" [class]="(currentPathname === menu.path) ? 'active-menu' : ''">
+      <a [routerLink]="menu.path">
+        <mat-icon
+          *ngIf="menu.type == 'icon'"
+          aria-hidden="false"
+          aria-label="Example home icon"
+          [fontIcon]="menu.icon"
+          class="dashboard-icon"
+        ></mat-icon>
+        <img
+          *ngIf="menu.type == 'img'"
+          [src]="menu.icon"
+          [alt]="menu.alt"
+          width="25"
+          height="25"
+        />
+        {{ menu.name }}
+      </a>
+    </li>
+
+  </ul>
+</div>
+    <!-- <li class="active-menu">
+      <a routerLink="/income">
+        <img
+          src="/assets/images/income_icon.png"
+          alt="Angular logo"
+          width="25"
+          height="25"
+        />
+        Income
+      </a>
+    </li>
+    <li>
+      <a routerLink="/expend">
+        <img
+          src="/assets/images/spending_icon.png"
+          alt="Angular logo"
+          width="25"
+          height="25"
+        />Expend</a
+      >
+    </li> -->

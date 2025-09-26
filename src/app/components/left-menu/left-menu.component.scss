@@ -1,0 +1,40 @@
+.left-menu {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    overflow: hidden;
+    border-right: 1px solid gray;
+    min-height: 100dvh;
+    cursor: pointer;
+    li {
+      a {
+        display: flex;
+        // width: 100%;
+        align-items: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: #333333;
+        &:hover {
+          background-color: #3389a1;
+          color: white;
+        }
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.active-menu {
+  background-color: #3389a1;
+  color: white;
+}
+.dashboard-icon {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
